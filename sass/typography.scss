@@ -18,6 +18,12 @@
 .accent {
 	color: color(accent-4);
 }
+.accent-red {
+	color: color(highlight-4);
+}
+.bold {
+	font-weight: bold !important;
+}
 
 h1, h2, 
 h3, h4, 
@@ -50,9 +56,4 @@ ul {
 	li {
 		color: color(default-font);
 	}
-}
-
-
-.bold {
-	font-weight: bold !important;
 }

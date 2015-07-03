@@ -277,6 +277,12 @@
 .accent {
   color: #222C65; }
 
+.accent-red {
+  color: #A31F34; }
+
+.bold {
+  font-weight: bold !important; }
+
 h1, h2,
 h3, h4,
 h5, h6 {
@@ -314,12 +320,21 @@ ul {
   ul li {
     color: #333D47; }
 
-.bold {
-  font-weight: bold !important; }
-
 /*-----------------------------------*\
 		         ¡GENERAL
 \*-----------------------------------*/
+@font-face {
+  font-family: 'MyriadPro-Regular';
+  src: url("../assets/fonts/MyriadPro-Regular.otf");
+  src: local(☺), url("../assets/fonts/MyriadPro-Regular.otf") format("otf"), url("../assets/fonts/MyriadPro-Regular.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Roboto-Black';
+  src: url("../assets/fonts/Roboto-Light.ttf");
+  src: local(☺), url("../assets/fonts/Roboto-Light.ttf") format("ttf"), url("../assets/fonts/Roboto-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -330,7 +345,7 @@ ul {
 
 body {
   background: #E6E7E8;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "MyriadPro-Regular", sans-serif;
   height: 100%;
   -webkit-font-smoothing: antialiased; }
 
@@ -356,11 +371,12 @@ body {
     margin: 5px 0 0 15px;
     width: 40px; }
   .header .title {
-    color: #A31F34;
     float: left;
-    line-height: 50px; }
+    font-family: "Roboto-Black";
+    line-height: 50px;
+    letter-spacing: 1px; }
     .header .title span {
-      color: #222C65; }
+      font-size: 20px; }
   .header .contact-info {
     line-height: 50px;
     margin-right: 50px; }
@@ -417,10 +433,11 @@ body {
 .btn-primary {
   border: none;
   border-radius: 0;
-  cursor: pointer; }
+  cursor: pointer;
+  text-decoration: none; }
 
 .btn-md {
-  font-size: 16px;
+  font-size: 18px;
   padding: 12px 25px; }
 
 .btn-primary {
@@ -449,11 +466,13 @@ body {
   padding: 70px 0; }
   .section .section-title {
     margin-bottom: 10px; }
-  .section .hr {
+  .section .hr, .section .hr-short {
     background: #A31F34;
     height: 6px;
     margin-bottom: 50px;
     width: 90px; }
+    .section .hr-short {
+      margin-bottom: 25px; }
 
 .highlight {
   border-top: 10px solid #A31F34; }
@@ -466,6 +485,33 @@ body {
   .armor .wrap-images img {
     cursor: pointer; }
   .armor .wrap-images img:nth-child(2) {
-    margin: 0 10px; }
+    margin: 0 5px 0 10px; }
+  .armor .wrap-images img:nth-child(3) {
+    margin: 0 10px 0 5px; }
+  .armor .wrap-images .thumbnail {
+    width: 100px; }
+
+.about .logo-lg {
+  width: 100px; }
+.about .title {
+  float: left;
+  font-weight: 600;
+  font-family: "Roboto-Black";
+  letter-spacing: 2px; }
+.about span {
+  font-size: 40px;
+  margin-top: 30px; }
+.about .section-title {
+  margin: 30px 0 10px; }
+.about a {
+  color: #222C65;
+  text-decoration: none; }
+
+/*------------------------------------*\
+                ¡FOOTER
+\*------------------------------------*/
+footer {
+  background: #222C65;
+  height: 240px; }
 
 /*# sourceMappingURL=main.css.map */

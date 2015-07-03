@@ -2,36 +2,30 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<title>LifeSafe</title>
 	<link rel="stylesheet" href="style/main.css">
+	<link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
 </head>
 <body>
 	<header class="header">
 		<a href="#">
 			<img src="assets/img/lifesafe-logo.png" alt="LifeSafe" class="header-logo">
-			<h5 class="title bold">Life<span>Safe&trade;</span></h5>
+			<h5 class="title accent-red bold">L<span>IFE</span></h5>
+			<h5 class="title accent bold">S<span>AFE&trade;</span></h5>
 		</a>
 		<nav class="wrap-menu lk-clear">
 			<ul>
-				<li>
-					<a href="">Classrooom</a>
-				</li>
-				<li>
-					<a href="">Sliding door</a>
-				</li>
-				<li>
-					<a href="">Armor kit</a>
-				</li>
-				<li>
-					<a href="">Solution</a>
-				</li>
-				<li>
-					<a href="">About</a>
-				</li>
+				<li><a data-scroll href="#classroom">Classrooom</a></li>
+				<li><a data-scroll href="#door">Sliding door</a></li>
+				<li><a data-scroll href="#armor">Armor kit</a></li>
+				<li><a data-scroll href="#solution">Solution</a></li>
+				<li><a data-scroll href="#about">About</a></li>
 			</ul>
 		</nav>
 		<div class="contact-info pull--right">
-			<p>Call For Inquiries <a href="tel:8019773132">801.977.3132</a></p>
+			<p>Call For Inquiries <a href="tel:1-801-977-3132">801.977.3132</a></p>
 		</div>
 	</header>
 
@@ -39,12 +33,12 @@
 		<div class="lk-squeeze">
 			<h1 class="sub-mast-title white">CLASSROOM ARMOR &#x2122;</h1>
 			<p class="sub-mast-info white bold">A complete line of defensive attack products designed to protect students from violent attacks.</p>
-			<button class="btn-primary btn-md push--right">LEARN MORE</button>
-			<button class="btn-primary btn-md">CONTACT US</button>
+			<a class="btn-primary btn-md push--right" data-scroll href="#classroom">LEARN MORE</a>
+			<a class="btn-primary btn-md" data-scroll href="#about">CONTACT US</a>
 		</div>
 	</section>
 
-	<section class="section classroom highlight">
+	<section class="section classroom highlight" id="classroom">
 		<div class="lk-squeeze">
 			<h2 class="section-title">EVERY CLASSROOM A SAFE-ROOM</h2>
 			<div class="hr"></div>
@@ -62,7 +56,7 @@
 		</div>
 	</section>
 
-	<section class="section door dark">
+	<section class="section door dark" id="door">
 		<div class="lk-squeeze">
 			<h2 class="section-title white">SLIDING DOOR</h2>
 			<div class="hr"></div>
@@ -77,19 +71,20 @@
 					<li class="white">Withstands sledge hammer &amp; axe breaching attempts</li>
 				</ul>
 			</div>
-			<button class="btn-primary btn-md">CONTACT US</button>
+			<a class="btn-primary btn-md" data-scroll href="#about">CONTACT US</a>
 		</div>
 	</section>
 
-	<section class="section armor">
+	<section class="section armor" id="armor">
 		<div class="lk-squeeze">
 			<h2 class="section-title">DOOR ARMOR KIT</h2>
 			<div class="hr"></div>
 			<img src="assets/img/Door_Armor_Kit_490_Image01.jpg" class="push-half--bottom" alt="Door Armor Kit">
 			<div class="wrap-images">
-				<img src="assets/img/Door_Armor_Kit_100_Image02.jpg" alt="">
-				<img src="assets/img/Door_Armor_Kit_100_Image03.jpg" alt="">
-				<img src="assets/img/Door_Armor_Kit_100_Image04.jpg" alt="">
+				<img src="assets/img/Door_Armor_Kit_490_Image02.jpg" class="thumbnail thumb1" alt="thumbnail">
+				<img src="assets/img/Door_Armor_Kit_490_Image03.jpg" class="thumbnail thumb2" alt="thumbnail">
+				<img src="assets/img/Door_Armor_Kit_490_Image04.jpg" class="thumbnail thumb3" alt="thumbnail">
+				<img src="assets/img/Door_Armor_Kit_490_Image01.jpg" class="thumbnail thumb4" alt="thumbnail">
 			</div>
 			<div class="squeeze-lg">
 				<p>The Door Armor Kit (patents pending) allows you to easily convert most any existing door into a ballistic barrier-of-entry. The kit includes all of the materials and hardware necessary to retroﬁt an existing door, including latch einforcing hardware. Designed for schools, the Door Armor Kit fortiﬁes classroom door openings instantly, making each classroom a safe-room. Once deployed the teacher and students are shielded against physical threats coming from outside the door.</p>
@@ -103,11 +98,11 @@
 					<li>Withstands sledge hammer &amp; axe breaching attempts</li>
 				</ul>
 			</div>
-			<button class="btn-primary btn-md">CONTACT US</button>
+			<a class="btn-primary btn-md" data-scroll href="#about">CONTACT US</a>
 		</div>
 	</section>
 
-	<section class="section solution dark">
+	<section class="section solution dark" id="solution">
 		<div class="lk-squeeze">
 			<h2 class="section-title white">A COMPREHENSIVE SOLUTION</h2>
 			<div class="hr"></div>
@@ -127,17 +122,42 @@
 				<h6 class="white">PERSONAL ACCESSORIES</h6>
 				<p class="white push--bottom">Our ballistic clipboards, whiteboards, and backpack inserts provide the added layer of protection that might save a life</p>
 			</div>
-			<button class="btn-primary btn-md">CONTACT US</button>
+			<a class="btn-primary btn-md" data-scroll href="#about">CONTACT US</a>
 		</div>
 	</section>
 
-	<section>
+	<section class="section about" id="about">
+		<div class="lk-squeeze">
+			<img src="assets/img/lifesafe-logo.png" class="logo-lg pull--left" alt="LifeSafe">
+			<h1 class="title accent-red push-half--left push--top">L<span class="bold">IFE</span></h1>
+			<h1 class="title accent push--top">S<span>AFE&trade;</span></h1>
+			<div class="clear"></div>
+			<h2 class="section-title">SALES</h2>
+			<div class="hr-short"></div>
+			<div class="squeeze-sm push--bottom">
+				<p class="push--bottom">Please contact our sales manage if you would like more information</p>
+				<h5 class="accent">BOB BRADSHAW</h5>
+				<h5 class="accent"><a href="tel:1-801-977-3132">801.977.3132</a></h5>
+				<h5 class="accent"><a href="mailto:bob@lifesafeintl.com">bob@LifeSafeIntl.com</a></h5>
+			</div>
+			<div class="squeeze-lg push--bottom">
+				<p>LifeSafe&trade; is a division of Daw Technologies Ballistic Products, LLC.</p>
+				<p>1600 West 2200 South Suite 201</p>
+				<p>Salt Lake City, UT 84119</p>
+			</div>
+
+			<h2 class="section-title">ABOUT</h2>
+			<div class="hr-short"></div>
+			<p class="push--bottom black">LifeSafe&trade; began over a decade ago when a handful of brilliant minds created a collection of seemingly unrelated products... doors, windows, podiums, desks, chairs, even clipboards... but if you looked closely you would have found that all of these things had one thing in common: they were designed to stop bullets.</p>
+			<p class="push--bottom black">For years we have provided peace of mind to military and government organizations who trust LifeSafe&trade; to protect their people from danger; but from the beginning the creators of LifeSafe&trade; wanted to make a greater impact on society as a whole. All of us as fathers and mothers, brothers and sisters, grandparents, and friends, want to protect our loved ones, and protect ourselves on behalf of those who depend on us. Unfortunately there are incidents every day where innocent lives are threatened and lost, lives that could have been saved with the right protection.</p>
+			<p class="push--bottom black">Today, we at LifeSafe&trade; are committed to providing peace of mind for all human life by making our trusted technology and designs accessible to the public.</p>
+		</div>
 	</section>
 
 	<footer>
 	</footer>
 
+	<script src="js/smoothScroll.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>
-

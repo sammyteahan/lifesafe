@@ -10,6 +10,26 @@
 		         ¡GENERAL
 \*-----------------------------------*/
 
+@font-face {
+	font-family: 'MyriadPro-Regular';
+	src: url('../assets/fonts/MyriadPro-Regular.otf');
+	src: local(☺), url('../assets/fonts/MyriadPro-Regular.otf') 
+		format('otf'), url('../assets/fonts/MyriadPro-Regular.otf') 
+		format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto-Black';
+	src: url('../assets/fonts/Roboto-Light.ttf');
+	src: local(☺), url('../assets/fonts/Roboto-Light.ttf') 
+		format('ttf'), url('../assets/fonts/Roboto-Light.ttf') 
+		format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
 * {
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
@@ -21,7 +41,7 @@
 
 body {
 	background: color(background-light);
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-family: "MyriadPro-Regular", sans-serif;
     height: 100%;
     -webkit-font-smoothing: antialiased;
 }
@@ -57,11 +77,12 @@ body {
 		width: 40px;
 	}
 	.title {
-		color: color(highlight-4);
 		float: left;
+		font-family: "Roboto-Black";
 		line-height: $header-height;
+		letter-spacing: 1px;
 		span {
-			color: color(accent-4);
+			font-size: 20px;
 		}
 	}
 	.contact-info {
@@ -148,6 +169,7 @@ body {
 	border: none;
 	border-radius: 0;
 	cursor: pointer;
+	text-decoration: none;
 }
 
 	.btn-sm {
@@ -155,7 +177,7 @@ body {
 	}
 
 	.btn-md {
-		font-size: 16px;
+		font-size: 18px;
 		padding: 12px 25px;
 	}
 
@@ -204,6 +226,10 @@ body {
 		height: 6px;
 		margin-bottom: 50px;
 		width: 90px;
+		&-short {
+			@extend .hr;
+			margin-bottom: 25px;
+		}
 	}
 }
 
@@ -222,13 +248,52 @@ body {
 			cursor: pointer;
 		}
 		img:nth-child(2) {
-			margin: 0 10px;
+			margin: 0 5px 0 10px;
 		}
+		img:nth-child(3) {
+			margin: 0 10px 0 5px;
+		}
+		.thumbnail {
+			width: 100px;
+		}
+	}
+}
+
+.about {
+	.logo-lg {
+		width: 100px;
+	}
+	.title {
+		float: left;
+		font-weight: 600;
+		font-family: "Roboto-Black";
+		letter-spacing: 2px;
+	}
+	span {
+		font-size: 40px;
+		margin-top: 30px;
+	}
+	.section-title {
+		margin: 30px 0 10px;
+	}
+	a {
+		color: color(accent-4);
+		text-decoration: none;
 	}
 }
 
 
 
+
+
+/*------------------------------------*\
+                ¡FOOTER
+\*------------------------------------*/
+
+footer {
+	background: color(accent-4);
+	height: config(footer);
+}
 
 
 
