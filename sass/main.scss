@@ -1,0 +1,234 @@
+/*===========================================================================*\
+                                    ¡MAIN
+\*===========================================================================*/
+
+@import "variables";
+@import "helpers";
+@import "typography";
+
+/*-----------------------------------*\
+		         ¡GENERAL
+\*-----------------------------------*/
+
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+         -o-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	background: color(background-light);
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+
+/**
+* These classes are used for content within the sections
+* that needs to be smaller than the squeeze width, but
+* still left aligned with lk-squeeze.
+*/
+
+.squeeze-lg {
+	max-width: 525px;
+}
+
+.squeeze-sm {
+	max-width: 400px;	
+}
+
+
+
+
+
+/*------------------------------------*\
+                ¡HEADER
+\*------------------------------------*/
+
+.header {
+	height: config(header);
+	width: 100%;
+	&-logo {
+		float: left;
+		margin: 5px 0 0 15px;
+		width: 40px;
+	}
+	.title {
+		color: color(highlight-4);
+		float: left;
+		line-height: $header-height;
+		span {
+			color: color(accent-4);
+		}
+	}
+	.contact-info {
+		line-height: $header-height;
+		margin-right: 50px;
+		a {
+			color: color(accent-4);
+			text-decoration: none;
+		}
+	}
+}
+
+
+
+
+
+/*------------------------------------*\
+               ¡MENU ¡NAV
+\*------------------------------------*/
+/**
+* Add class of is-active to anchor tag when link
+* is clicked. This will allow active li to persist
+*/
+
+.wrap-menu {
+	float: left;
+	line-height: $header-height;
+	margin-left: 35px;
+	ul {
+		li {
+			font-size: 18px;
+			list-style: none;
+			display: inline-block;
+		}
+		li:hover,
+		li:active {
+			background: lighten(color(accent-4), 5%);
+			color: #fff;
+		}
+		a {
+			color: color(default-font);
+			display: block;
+			padding: 0 15px;
+			text-decoration: none;
+		}
+		a:hover {
+			color: #fff;
+		}
+	}
+}
+
+
+
+
+/*------------------------------------*\
+               ¡SUBMAST
+\*------------------------------------*/
+
+.sub-mast {
+	background: url(../assets/img/banner.png) no-repeat center;
+	background-size: cover;
+	height: 450px;
+	&-title {
+		font-size: 50px;
+		font-weight: 400;
+		padding: 130px 0 0 0;
+		margin: 0 0 30px 0;
+	}
+	&-info {
+		margin: 30px 0;
+		max-width: 500px;
+	}
+}
+
+
+
+
+
+/*------------------------------------*\
+               ¡BUTTONS
+\*------------------------------------*/
+
+%btn {
+	border: none;
+	border-radius: 0;
+	cursor: pointer;
+}
+
+	.btn-sm {
+
+	}
+
+	.btn-md {
+		font-size: 16px;
+		padding: 12px 25px;
+	}
+
+	.btn-lg {
+
+	}
+
+	.btn-primary {
+		@extend %btn;
+		background: #fff;
+		border: 2px solid #fff;
+		color: color(accent-4);
+		transition: 1s ease all;
+	}
+
+	.btn-primary:active,
+	.btn-primary:hover {
+		background: lighten(color(accent-4), 5%);
+		color: #fff;
+		text-decoration: none;
+	}
+
+	.btn-primary:focus {
+		outline: 0 !important;
+	}
+
+
+
+
+
+/*------------------------------------*\
+              ¡SECTIONS
+\*------------------------------------*/
+/**
+* This first definition gives us our basic definition of
+* a section. Following classes/blocks will be more specific
+*/
+
+.section {
+	padding: 70px 0;
+	.section-title {
+		margin-bottom: 10px;
+	}
+	.hr	{
+		background: color(highlight-4);
+		height: 6px;
+		margin-bottom: 50px;
+		width: 90px;
+	}
+}
+
+.highlight {
+	border-top: 10px solid color(highlight-4);
+}
+
+.dark {
+	background: color(accent-4);
+}
+
+.armor {
+	.wrap-images {
+		margin-bottom: 35px;
+		img {
+			cursor: pointer;
+		}
+		img:nth-child(2) {
+			margin: 0 10px;
+		}
+	}
+}
+
+
+
+
+
+

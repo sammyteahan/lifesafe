@@ -1,0 +1,72 @@
+/*===========================================================================*\
+                                    ¡VARIABLES
+\*===========================================================================*/
+$configs: (
+  header: 50px,
+  footer: 240px
+);
+
+/**
+* Colors: accent == blue, main === gray && highlight === red
+*/
+$colors: (
+  background-light: #E6E7E8,
+  default-font: #333D47,
+  highlight-4: #A31F34,
+  accent-4: #222C65,
+  accent-8: #222C65,
+);
+
+$breakpoints: (
+  phone:      450px,
+  phone-lg:   650px,
+  tablet:     767px,
+  tablet-lg:  992px,
+  desktop-lg: 1024px,
+  desktop-xl: 1400px
+);
+
+/*------------------------------------*\
+           Helper functions
+\*------------------------------------*/
+/**
+* so we don't always have to 
+* type 'map-get'
+*/
+/* background: color(color-100); */
+@function config($key) {
+  @if map-has-key($configs, $key) {
+    @return map-get($configs, $key);
+  }
+  @warn "Unknown #{$key} in configs map";
+  @return null;
+}
+
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+  @warn "Unknown #{$key} in colors map";
+  @return null;
+}
+
+/* breakpoint(phone); */
+@function breakpoint($key) {
+  @if map-has-key($breakpoints, $key) {
+    @return map-get($breakpoints, $key);
+  }
+  @warn "Unknown #{$key} in breakpoints map";
+  @return null;
+}
+
+/*------------------------------------*\
+          ¡SPACING AND ¡SIZES 
+\*------------------------------------*/
+
+$base-spacing-unit:  20px;
+$half-spacing-unit:  ($base-spacing-unit / 2);
+$squeeze-width:      720px;
+$header-height:      50px;
+$footer-height:      240px;
+$default-font-size:  16px;
+
