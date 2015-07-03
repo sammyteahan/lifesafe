@@ -32,4 +32,14 @@
   thumbThree.addEventListener('click', setAsMain);
   thumbFour.addEventListener('click', setAsMain);
 
+  /**
+  * Super ticked I brought in jQuery just for this.
+  * Such a shame.
+  */
+
+  $('.menu-icon').click(function(e){
+      e.preventDefault();
+      $('.wrap-mobile-menu').slideToggle('slow');
+    });
+
 }());

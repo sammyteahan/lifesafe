@@ -87,10 +87,27 @@ body {
 	}
 	.contact-info {
 		line-height: $header-height;
-		margin-right: 50px;
+		margin-right: 40px;
 		a {
 			color: color(accent-4);
 			text-decoration: none;
+		}
+	}
+	.menu-icon-wrapper {
+		display: none;
+	}
+	@media screen and (max-width: breakpoint(desktop)) {
+		.contact-info {
+			display: none;
+		}
+		.menu-icon-wrapper {
+			display: block;
+			position: absolute;
+			right: 25px;
+			top: 20px;
+		}
+		.menu-icon-wrapper:hover {
+			cursor: pointer;
 		}
 	}
 }
@@ -110,7 +127,7 @@ body {
 .wrap-menu {
 	float: left;
 	line-height: $header-height;
-	margin-left: 35px;
+	margin-left: 30px;
 	ul {
 		li {
 			font-size: 18px;
@@ -132,6 +149,45 @@ body {
 			color: #fff;
 		}
 	}
+	@media screen and (max-width: breakpoint(desktop)) {
+		display: none;
+	}
+}
+
+.wrap-mobile-menu {
+	display: none;
+	@media screen and (max-width: breakpoint(desktop)) {
+		ul {
+			padding: 0;
+			text-align: center;
+			li {
+				border-bottom: 1px solid lighten(color(highlight-4), 15%);
+				display: block;
+				font-size: 18px;
+				list-style: none;
+			}
+			li:first-child {
+				border-top: 1px solid lighten(color(highlight-4), 15%);
+			}
+			li:hover,
+			li:active {
+				background: lighten(color(highlight-4), 15%);
+			}
+			a {
+				color: color(default-font);
+				display: block;
+				padding: 5px 0;
+				text-decoration: none;
+			}
+			a:hover {
+				color: #fff;
+			}
+		}
+	}
+}
+
+.wrap-mobile-menu.is-active {
+	display: block;
 }
 
 
@@ -148,12 +204,39 @@ body {
 	&-title {
 		font-size: 50px;
 		font-weight: 400;
-		padding: 130px 0 0 0;
+		padding: 130px 0 0;
 		margin: 0 0 30px 0;
 	}
 	&-info {
 		margin: 30px 0;
 		max-width: 500px;
+	}
+	@media screen and (max-width: breakpoint(phone-lg)) {
+		height: 300px;
+		&-title {
+			padding: 30px 0 0;
+		}
+		.btn-primary {
+			display: block;
+			text-align: center;
+			margin: 8px 0;
+			width: 150px;
+
+		}
+		.btn-md {
+			font-size: 16px;
+			padding: 12px 15px;
+		}
+	}
+	@media screen and (max-width: breakpoint(phone)) {
+		&-title {
+			font-size: 28px !important;
+			padding: 30px 0 0;
+			margin: 0 0 15px;
+		}
+		&-info {
+			margin: 15px 0;
+		}
 	}
 }
 
@@ -230,6 +313,12 @@ body {
 			@extend .hr;
 			margin-bottom: 25px;
 		}
+		@media screen and (max-width: breakpoint(tablet)) {
+			margin-bottom: 30px;
+		}
+	}
+	@media screen and (max-width: breakpoint(tablet)) {
+		padding: 30px 0;
 	}
 }
 
@@ -239,6 +328,11 @@ body {
 
 .dark {
 	background: color(accent-4);
+}
+
+.responsive {
+	max-width: 490px;
+	width: 100%;
 }
 
 .armor {
@@ -255,6 +349,13 @@ body {
 		}
 		.thumbnail {
 			width: 100px;
+		}
+		@media screen and (max-width: breakpoint(phone)) {
+			text-align: center;
+			img {
+				display: inline-block;
+				margin: 2px 5px !important;
+			}
 		}
 	}
 }
@@ -280,6 +381,15 @@ body {
 		color: color(accent-4);
 		text-decoration: none;
 	}
+	@media screen and (max-width: breakpoint(phone-lg)) {
+		.title {
+			font-size: 28px !important;
+			margin-top: 30px !important;
+		}
+		span {
+			font-size: 28px;
+		}
+	}
 }
 
 
@@ -293,6 +403,9 @@ body {
 footer {
 	background: color(accent-4);
 	height: config(footer);
+	@media screen and (max-width: breakpoint(phone-lg)) {
+		height: config(footer) / 10;
+	}
 }
 
 

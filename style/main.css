@@ -320,6 +320,30 @@ ul {
   ul li {
     color: #333D47; }
 
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 44px !important; }
+
+  h2 {
+    font-size: 34px !important; }
+
+  h5 {
+    font-size: 22px !important; }
+
+  h6 {
+    font-size: 18px !important; } }
+@media screen and (max-width: 450px) {
+  h1 {
+    font-size: 40px !important; }
+
+  h2 {
+    font-size: 30px !important; }
+
+  h5 {
+    font-size: 22px !important; }
+
+  h6 {
+    font-size: 18px !important; } }
 /*-----------------------------------*\
 		         ¡GENERAL
 \*-----------------------------------*/
@@ -379,10 +403,22 @@ body {
       font-size: 20px; }
   .header .contact-info {
     line-height: 50px;
-    margin-right: 50px; }
+    margin-right: 40px; }
     .header .contact-info a {
       color: #222C65;
       text-decoration: none; }
+  .header .menu-icon-wrapper {
+    display: none; }
+  @media screen and (max-width: 1024px) {
+    .header .contact-info {
+      display: none; }
+    .header .menu-icon-wrapper {
+      display: block;
+      position: absolute;
+      right: 25px;
+      top: 20px; }
+    .header .menu-icon-wrapper:hover {
+      cursor: pointer; } }
 
 /*------------------------------------*\
                ¡MENU ¡NAV
@@ -394,7 +430,7 @@ body {
 .wrap-menu {
   float: left;
   line-height: 50px;
-  margin-left: 35px; }
+  margin-left: 30px; }
   .wrap-menu ul li {
     font-size: 18px;
     list-style: none;
@@ -410,6 +446,36 @@ body {
     text-decoration: none; }
   .wrap-menu ul a:hover {
     color: #fff; }
+  @media screen and (max-width: 1024px) {
+    .wrap-menu {
+      display: none; } }
+
+.wrap-mobile-menu {
+  display: none; }
+  @media screen and (max-width: 1024px) {
+    .wrap-mobile-menu ul {
+      padding: 0;
+      text-align: center; }
+      .wrap-mobile-menu ul li {
+        border-bottom: 1px solid #d93650;
+        display: block;
+        font-size: 18px;
+        list-style: none; }
+      .wrap-mobile-menu ul li:first-child {
+        border-top: 1px solid #d93650; }
+      .wrap-mobile-menu ul li:hover,
+      .wrap-mobile-menu ul li:active {
+        background: #d93650; }
+      .wrap-mobile-menu ul a {
+        color: #333D47;
+        display: block;
+        padding: 5px 0;
+        text-decoration: none; }
+      .wrap-mobile-menu ul a:hover {
+        color: #fff; } }
+
+.wrap-mobile-menu.is-active {
+  display: block; }
 
 /*------------------------------------*\
                ¡SUBMAST
@@ -421,11 +487,31 @@ body {
   .sub-mast-title {
     font-size: 50px;
     font-weight: 400;
-    padding: 130px 0 0 0;
+    padding: 130px 0 0;
     margin: 0 0 30px 0; }
   .sub-mast-info {
     margin: 30px 0;
     max-width: 500px; }
+  @media screen and (max-width: 650px) {
+    .sub-mast {
+      height: 300px; }
+      .sub-mast-title {
+        padding: 30px 0 0; }
+      .sub-mast .btn-primary {
+        display: block;
+        text-align: center;
+        margin: 8px 0;
+        width: 150px; }
+      .sub-mast .btn-md {
+        font-size: 16px;
+        padding: 12px 15px; } }
+  @media screen and (max-width: 450px) {
+    .sub-mast-title {
+      font-size: 28px !important;
+      padding: 30px 0 0;
+      margin: 0 0 15px; }
+    .sub-mast-info {
+      margin: 15px 0; } }
 
 /*------------------------------------*\
                ¡BUTTONS
@@ -473,12 +559,22 @@ body {
     width: 90px; }
     .section .hr-short {
       margin-bottom: 25px; }
+    @media screen and (max-width: 767px) {
+      .section .hr, .section .hr-short {
+        margin-bottom: 30px; } }
+  @media screen and (max-width: 767px) {
+    .section {
+      padding: 30px 0; } }
 
 .highlight {
   border-top: 10px solid #A31F34; }
 
 .dark {
   background: #222C65; }
+
+.responsive {
+  max-width: 490px;
+  width: 100%; }
 
 .armor .wrap-images {
   margin-bottom: 35px; }
@@ -490,6 +586,12 @@ body {
     margin: 0 10px 0 5px; }
   .armor .wrap-images .thumbnail {
     width: 100px; }
+  @media screen and (max-width: 450px) {
+    .armor .wrap-images {
+      text-align: center; }
+      .armor .wrap-images img {
+        display: inline-block;
+        margin: 2px 5px !important; } }
 
 .about .logo-lg {
   width: 100px; }
@@ -506,6 +608,12 @@ body {
 .about a {
   color: #222C65;
   text-decoration: none; }
+@media screen and (max-width: 650px) {
+  .about .title {
+    font-size: 28px !important;
+    margin-top: 30px !important; }
+  .about span {
+    font-size: 28px; } }
 
 /*------------------------------------*\
                 ¡FOOTER
@@ -513,5 +621,8 @@ body {
 footer {
   background: #222C65;
   height: 240px; }
+  @media screen and (max-width: 650px) {
+    footer {
+      height: 24px; } }
 
 /*# sourceMappingURL=main.css.map */
